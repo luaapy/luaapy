@@ -1,16 +1,50 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**luaapy/luaapy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+#  Nosan (luaapy)
 
-Here are some ideas to get you started:
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=600&lines=Coding+Everytime;Develop+Whatever+I+Want" alt="Typing SVG" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+## 📈 Contribution Graph
+
+<div align="center">
+
+[![Nosan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=luaapy&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=A855F7&line=A855F7&point=A855F7)](https://github.com/luaapy)
+
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=luaapy&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7)](https://github.com/luaapy)
+
+</div>
+
+---
+
+## 💻 Most Used Languages
+
+<div align="center">
+
+```text
+HTML/CSS         █████████████░░░░░░░░   45.20%
+JavaScript       ██████████░░░░░░░░░░░   30.45%
+Python           ███████░░░░░░░░░░░░░░   15.30%
+Lua             ████░░░░░░░░░░░░░░░░░   6.25%
+Java            ██░░░░░░░░░░░░░░░░░░░   2.80%
+```
+
+</div>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontColor=fff&animation=twinkling" width="100%"/>
+
+<img src="https://komarev.com/ghpvc/?username=luaapy&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
+
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourdiscord)
+</div>
