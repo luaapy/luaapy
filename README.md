@@ -14,18 +14,6 @@
 
 </div>
 
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=luaapy&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7)](https://github.com/luaapy)
-
-</div>
-
----
-
 ## 💻 Most Used Languages
 
 <div align="center">
