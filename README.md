@@ -30,7 +30,9 @@ Java            ██░░░░░░░░░░░░░░░░░░░ 
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontColor=fff&animation=twinkling" width="100%"/>
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?section=footer&type=waving&color=8A2BE2&text=Thanks%20for%20visiting!&fontSize=25&fontColor=ffffff&animation=twinkling" width="100%"/>
+</div>
 
 <img src="https://komarev.com/ghpvc/?username=luaapy&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
 
