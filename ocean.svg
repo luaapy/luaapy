@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: transparent">
+  <defs>
+    <!-- Gradient untuk laut dengan animasi warna -->
+    <linearGradient id="oceanGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#50bebe;stop-opacity:1">
+        <animate attributeName="stop-color" values="#50bebe;#4ecdc4;#45b7d1;#50bebe" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#3eaaaa;stop-opacity:0.95">
+        <animate attributeName="stop-color" values="#3eaaaa;#3cb8b8;#38a5b5;#3eaaaa" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#2d8b8b;stop-opacity:0.9">
+        <animate attributeName="stop-color" values="#2d8b8b;#2b9595;#298585;#2d8b8b" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="oceanGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#45b0b0;stop-opacity:0.85">
+        <animate attributeName="stop-color" values="#45b0b0;#43bcbc;#40a8a8;#45b0b0" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#3a9d9d;stop-opacity:0.8">
+        <animate attributeName="stop-color" values="#3a9d9d;#38a7a7;#359191;#3a9d9d" dur="7s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="oceanGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#55c5c5;stop-opacity:0.9">
+        <animate attributeName="stop-color" values="#55c5c5;#52d0d0;#4fbaba;#55c5c5" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#48b5b5;stop-opacity:0.85">
+        <animate attributeName="stop-color" values="#48b5b5;#46c0c0;#43a9a9;#48b5b5" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Filter untuk glow effect -->
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Filter untuk soft shadow -->
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Gelombang laut berlapis dengan animasi smooth -->
+  <g>
+    <!-- Layer paling belakang - gerakan lambat -->
+    <path fill="url(#oceanGradient1)" filter="url(#softShadow)">
+      <animate attributeName="d" 
+        values="M 0,650 Q 160,600 320,650 Q 480,700 640,650 Q 800,600 960,650 Q 1120,700 1280,650 Q 1440,600 1600,650 Q 1760,700 1920,650 L 1920,1080 L 0,1080 Z;
+                M 0,650 Q 160,700 320,650 Q 480,600 640,650 Q 800,700 960,650 Q 1120,600 1280,650 Q 1440,700 1600,650 Q 1760,600 1920,650 L 1920,1080 L 0,1080 Z;
+                M 0,650 Q 160,600 320,650 Q 480,700 640,650 Q 800,600 960,650 Q 1120,700 1280,650 Q 1440,600 1600,650 Q 1760,700 1920,650 L 1920,1080 L 0,1080 Z"
+        dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"/>
+    </path>
+    
+    <!-- Layer tengah - gerakan medium -->
+    <path fill="url(#oceanGradient2)" filter="url(#glow1)">
+      <animate attributeName="d" 
+        values="M 0,720 Q 192,670 384,720 Q 576,770 768,720 Q 960,670 1152,720 Q 1344,770 1536,720 Q 1728,670 1920,720 L 1920,1080 L 0,1080 Z;
+                M 0,720 Q 192,770 384,720 Q 576,670 768,720 Q 960,770 1152,720 Q 1344,670 1536,720 Q 1728,770 1920,720 L 1920,1080 L 0,1080 Z;
+                M 0,720 Q 192,670 384,720 Q 576,770 768,720 Q 960,670 1152,720 Q 1344,770 1536,720 Q 1728,670 1920,720 L 1920,1080 L 0,1080 Z"
+        dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+    </path>
+    
+    <!-- Layer depan - gerakan cepat dengan detail lebih -->
+    <path fill="url(#oceanGradient3)" filter="url(#glow2)">
+      <animate attributeName="d" 
+        values="M 0,790 Q 120,750 240,790 Q 360,830 480,790 Q 600,750 720,790 Q 840,830 960,790 Q 1080,750 1200,790 Q 1320,830 1440,790 Q 1560,750 1680,790 Q 1800,830 1920,790 L 1920,1080 L 0,1080 Z;
+                M 0,790 Q 120,830 240,790 Q 360,750 480,790 Q 600,830 720,790 Q 840,750 960,790 Q 1080,830 1200,790 Q 1320,750 1440,790 Q 1560,830 1680,790 Q 1800,750 1920,790 L 1920,1080 L 0,1080 Z;
+                M 0,790 Q 120,750 240,790 Q 360,830 480,790 Q 600,750 720,790 Q 840,830 960,790 Q 1080,750 1200,790 Q 1320,830 1440,790 Q 1560,750 1680,790 Q 1800,830 1920,790 L 1920,1080 L 0,1080 Z"
+        dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    </path>
+    
+    <!-- Gelombang detail halus di atas -->
+    <path fill="none" stroke="#6dd5d5" stroke-width="3" opacity="0.4" stroke-linecap="round">
+      <animate attributeName="d" 
+        values="M 0,760 Q 80,740 160,760 Q 240,780 320,760 Q 400,740 480,760 Q 560,780 640,760 Q 720,740 800,760 Q 880,780 960,760 Q 1040,740 1120,760 Q 1200,780 1280,760 Q 1360,740 1440,760 Q 1520,780 1600,760 Q 1680,740 1760,760 Q 1840,780 1920,760;
+                M 0,760 Q 80,780 160,760 Q 240,740 320,760 Q 400,780 480,760 Q 560,740 640,760 Q 720,780 800,760 Q 880,740 960,760 Q 1040,780 1120,760 Q 1200,740 1280,760 Q 1360,780 1440,760 Q 1520,740 1600,760 Q 1680,780 1760,760 Q 1840,740 1920,760;
+                M 0,760 Q 80,740 160,760 Q 240,780 320,760 Q 400,740 480,760 Q 560,780 640,760 Q 720,740 800,760 Q 880,780 960,760 Q 1040,740 1120,760 Q 1200,780 1280,760 Q 1360,740 1440,760 Q 1520,780 1600,760 Q 1680,740 1760,760 Q 1840,780 1920,760"
+        dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.37 0 0.63 1; 0.37 0 0.63 1"/>
+    </path>
+    
+    <!-- Gelombang detail kedua -->
+    <path fill="none" stroke="#70d8d8" stroke-width="2.5" opacity="0.35" stroke-linecap="round">
+      <animate attributeName="d" 
+        values="M 0,740 Q 96,720 192,740 Q 288,760 384,740 Q 480,720 576,740 Q 672,760 768,740 Q 864,720 960,740 Q 1056,760 1152,740 Q 1248,720 1344,740 Q 1440,760 1536,740 Q 1632,720 1728,740 Q 1824,760 1920,740;
+                M 0,740 Q 96,760 192,740 Q 288,720 384,740 Q 480,760 576,740 Q 672,720 768,740 Q 864,760 960,740 Q 1056,720 1152,740 Q 1248,760 1344,740 Q 1440,720 1536,740 Q 1632,760 1728,740 Q 1824,720 1920,740;
+                M 0,740 Q 96,720 192,740 Q 288,760 384,740 Q 480,720 576,740 Q 672,760 768,740 Q 864,720 960,740 Q 1056,760 1152,740 Q 1248,720 1344,740 Q 1440,760 1536,740 Q 1632,720 1728,740 Q 1824,760 1920,740"
+        dur="4.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.37 0 0.63 1; 0.37 0 0.63 1"/>
+    </path>
+    
+    <!-- Gelombang detail ketiga - paling halus -->
+    <path fill="none" stroke="#75dbdb" stroke-width="2" opacity="0.25" stroke-linecap="round">
+      <animate attributeName="d" 
+        values="M 0,720 Q 60,705 120,720 Q 180,735 240,720 Q 300,705 360,720 Q 420,735 480,720 Q 540,705 600,720 Q 660,735 720,720 Q 780,705 840,720 Q 900,735 960,720 Q 1020,705 1080,720 Q 1140,735 1200,720 Q 1260,705 1320,720 Q 1380,735 1440,720 Q 1500,705 1560,720 Q 1620,735 1680,720 Q 1740,705 1800,720 Q 1860,735 1920,720;
+                M 0,720 Q 60,735 120,720 Q 180,705 240,720 Q 300,735 360,720 Q 420,705 480,720 Q 540,735 600,720 Q 660,705 720,720 Q 780,735 840,720 Q 900,705 960,720 Q 1020,735 1080,720 Q 1140,705 1200,720 Q 1260,735 1320,720 Q 1380,705 1440,720 Q 1500,735 1560,720 Q 1620,705 1680,720 Q 1740,735 1800,720 Q 1860,705 1920,720;
+                M 0,720 Q 60,705 120,720 Q 180,735 240,720 Q 300,705 360,720 Q 420,735 480,720 Q 540,705 600,720 Q 660,735 720,720 Q 780,705 840,720 Q 900,735 960,720 Q 1020,705 1080,720 Q 1140,735 1200,720 Q 1260,705 1320,720 Q 1380,735 1440,720 Q 1500,705 1560,720 Q 1620,735 1680,720 Q 1740,705 1800,720 Q 1860,735 1920,720"
+        dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.37 0 0.63 1; 0.37 0 0.63 1"/>
+    </path>
+    
+    <!-- Highlight shimmer effect -->
+    <path fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round" filter="url(#glow2)">
+      <animate attributeName="d" 
+        values="M 0,780 Q 100,765 200,780 Q 300,795 400,780 Q 500,765 600,780 Q 700,795 800,780 Q 900,765 1000,780 Q 1100,795 1200,780 Q 1300,765 1400,780 Q 1500,795 1600,780 Q 1700,765 1800,780 Q 1900,795 1920,780;
+                M 0,780 Q 100,795 200,780 Q 300,765 400,780 Q 500,795 600,780 Q 700,765 800,780 Q 900,795 1000,780 Q 1100,765 1200,780 Q 1300,795 1400,780 Q 1500,765 1600,780 Q 1700,795 1800,780 Q 1900,765 1920,780;
+                M 0,780 Q 100,765 200,780 Q 300,795 400,780 Q 500,765 600,780 Q 700,795 800,780 Q 900,765 1000,780 Q 1100,795 1200,780 Q 1300,765 1400,780 Q 1500,795 1600,780 Q 1700,765 1800,780 Q 1900,795 1920,780"
+        dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.37 0 0.63 1; 0.37 0 0.63 1"/>
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
